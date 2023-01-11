@@ -13,8 +13,7 @@ const sumatoria=vector.reduce((ac,va)=>{
 
 console.log("La sumatoria del vector es: ",sumatoria)
 //Diseñe la funcion que devuel el producto de los elementos de un vector
-
-/*const producto = function(vector){
+const producto = function(vector){
     return vector.reduce( (ac, va) => {
         return ac*va;
     })
@@ -22,7 +21,7 @@ console.log("La sumatoria del vector es: ",sumatoria)
 
 console.log(producto([1,2,3]));
 console.log(producto([4,5,6]));
-*/
+
 /*
 foreach:recorre todos los elementos del vector
 */
@@ -36,13 +35,12 @@ vector.forEach((num,index)=>{
 //resultado esperado: "oa Eeaa"
 //Utilice filter
 
-const cadena=function(ca)
-{
-    return ca.split("")
-    
+function eliminarConsonantes(cadena) {
+    const vocales = /[aeiouAEIOU]/g;
+    return cadena.split("").filter(letra => vocales.test(letra)).join("");
 }
 
-console.log(cadena("Hola Esmeraldas"))
+console.log(eliminarConsonantes("Hola Esmeraldas"))
 
 //Determine si todos los elemtos de la siguiente matriz son positivos
 
