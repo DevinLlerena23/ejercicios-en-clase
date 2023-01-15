@@ -46,6 +46,9 @@ console.log(eliminarConsonantes("Hola Esmeraldas"))
 
 const matrizNumeros=[[1,2,3,4],[4,5,6,7],[7,8,9,10]]
 console.log(matrizNumeros)
-matrizNumeros.map(matriz=>{
-    return matriz
-})
+
+const positivos = matrizNumeros.every(subArray => {
+    return subArray.every(numero => numero > 0);
+  });
+  console.log("Los numeros de los vectores son positivos?",positivos);
+  
